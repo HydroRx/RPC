@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Rock Paper Scissors</title>
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <div class="content">
+      <div class="title">
+        <h1>Rock Paper Scissors Spock or Lizard!</h1>
+        <h2>First to 5 wins!</h2>
+        <h3 id="whowon"></h3>
+        <h4 id="whochosewhat"></h4>
+      </div>
+
+      <div class="options">
+        <button class="option shadow" data-choice="rock">
+          <img src="/images/rock-svgrepo-com.svg" alt="Rock" />
+        </button>
+        <button class="option shadow" data-choice="paper">
+          <img src="/images/paper-sheet-svgrepo-com.svg" alt="Paper" />
+        </button>
+        <button class="option shadow" data-choice="scissors">
+          <img src="/images/scissors-svgrepo-com.svg" alt="Scissors" />
+        </button>
+        <button class="option shadow-white" data-choice="spock">
+          <img src="/images/spock-hand-svgrepo-com.svg" alt="Spock" />
+        </button>
+        <button class="option shadow" data-choice="lizard">
+          <img src="/images/lizard-svgrepo-com.svg" alt="Lizard" />
+        </button>
+      </div>
+
+      <div class="score">
+        <p>Player Score: <span id="player-score">0</span></p>
+        <p>Computer Score: <span id="computer-score">0</span></p>
+      </div>
+    </div>
+
+    <script src="script.js"></script>
+  </body>
+</html>

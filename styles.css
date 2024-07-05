@@ -1,0 +1,92 @@
+
+@import url('https://fonts.googleapis.com/css2?family=Bebas+Neue&display=swap');
+
+
+body {
+    background-color: #b5d3e9;
+background-image: url("https://www.transparenttextures.com/patterns/asfalt-light.png");
+font-family: 'Bebas Neue', sans-serif;
+
+}
+
+*,
+*::before,
+*::after {
+    margin: 0;
+    padding: 0;
+}
+
+.content {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 150px;
+    padding: 36px;
+   letter-spacing: 2px;
+}
+
+h1 {
+    font-size: 72px;
+}
+
+h2 {
+font-size: 48px;
+}
+
+.title {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 36px;
+}
+
+.score {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 96px;
+}
+
+.options {
+    display: flex;
+    gap: 96px;
+}
+
+
+.option {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 10px; 
+    background-color: transparent;
+    border: transparent;
+    
+}
+
+.option:hover {
+    transform: scale(1.1);
+    transition: transform 0.2s ease-in-out;
+    cursor: pointer;
+    
+}
+
+.option img {
+    width: 100px; 
+    height: auto;
+}
+
+
+
+.shadow:hover {
+    
+    -webkit-filter: drop-shadow(5px 5px 4px rgba(0, 0, 0, 0.9));
+    filter: drop-shadow(5px 5px 4px rgba(0, 0, 0, 0.9));
+}
+
+.shadow-white:hover {
+    
+    -webkit-filter: drop-shadow(5px 5px 4px rgba(255, 255, 255, 0.9));
+    filter: drop-shadow(5px 5px 4px rgba(255, 255, 255, 0.9));
+}
