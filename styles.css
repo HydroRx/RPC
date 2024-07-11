@@ -1,92 +1,197 @@
-
-@import url('https://fonts.googleapis.com/css2?family=Bebas+Neue&display=swap');
-
+@import url("https://fonts.googleapis.com/css2?family=Bebas+Neue&display=swap");
 
 body {
-    background-color: #b5d3e9;
-background-image: url("https://www.transparenttextures.com/patterns/asfalt-light.png");
-font-family: 'Bebas Neue', sans-serif;
-
+  background-color: #b5d3e9;
+  background-image: url("https://www.transparenttextures.com/patterns/asfalt-light.png");
+  font-family: "Bebas Neue", sans-serif;
 }
 
 *,
 *::before,
 *::after {
-    margin: 0;
-    padding: 0;
+  margin: 0;
+  padding: 0;
 }
 
 .content {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    gap: 150px;
-    padding: 36px;
-   letter-spacing: 2px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 150px;
+  padding: 36px;
+  letter-spacing: 2px;
 }
 
 h1 {
-    font-size: 72px;
+  font-size: 72px;
 }
 
 h2 {
-font-size: 48px;
+  font-size: 48px;
+}
+
+.winner-player {
+  color: green;
+}
+
+.winner-computer {
+  color: red;
 }
 
 .title {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    gap: 36px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 36px;
 }
 
 .score {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    gap: 96px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 96px;
 }
 
 .options {
-    display: flex;
-    gap: 96px;
+  display: flex;
+  gap: 96px;
 }
 
-
 .option {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    padding: 10px; 
-    background-color: transparent;
-    border: transparent;
-    
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 10px;
+  background-color: transparent;
+  border: transparent;
 }
 
 .option:hover {
-    transform: scale(1.1);
-    transition: transform 0.2s ease-in-out;
-    cursor: pointer;
-    
+  transform: scale(1.1);
+  transition: transform 0.2s ease-in-out;
+  cursor: pointer;
 }
 
 .option img {
-    width: 100px; 
-    height: auto;
+  width: 100px;
+  height: auto;
 }
 
-
-
 .shadow:hover {
-    
-    -webkit-filter: drop-shadow(5px 5px 4px rgba(0, 0, 0, 0.9));
-    filter: drop-shadow(5px 5px 4px rgba(0, 0, 0, 0.9));
+  -webkit-filter: drop-shadow(5px 5px 4px rgba(0, 0, 0, 0.9));
+  filter: drop-shadow(5px 5px 4px rgba(0, 0, 0, 0.9));
 }
 
 .shadow-white:hover {
-    
-    -webkit-filter: drop-shadow(5px 5px 4px rgba(255, 255, 255, 0.9));
-    filter: drop-shadow(5px 5px 4px rgba(255, 255, 255, 0.9));
+  -webkit-filter: drop-shadow(5px 5px 4px rgba(255, 255, 255, 0.9));
+  filter: drop-shadow(5px 5px 4px rgba(255, 255, 255, 0.9));
+}
+
+@media (max-width: 1000px) {
+  .options {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-gap: 10px;
+  }
+
+  .rpssl-title {
+    font-size: 48px;
+    text-align: center;
+  }
+
+  h2 {
+    font-size: 24px;
+  }
+  .content {
+    gap: 100px;
+  }
+
+  .option img {
+    width: 50px;
+    height: auto;
+  }
+  .celebration {
+    font-size: 24px;
+  }
+}
+
+.celebration {
+  display: flex;
+  width: 100vw;
+  height: 100vh;
+  align-items: center;
+  justify-content: center;
+  margin: 0;
+  background: #131313;
+  color: #fff;
+  font-size: 96px;
+  font-family: "Fira Mono", monospace;
+  letter-spacing: -7px;
+}
+
+.celebration {
+  animation: glitch 1s linear infinite;
+}
+
+@keyframes glitch {
+  2%,
+  64% {
+    transform: translate(2px, 0) skew(0deg);
+  }
+  4%,
+  60% {
+    transform: translate(-2px, 0) skew(0deg);
+  }
+  62% {
+    transform: translate(0, 0) skew(5deg);
+  }
+}
+
+.celebration:before,
+.celebration:after {
+  content: attr(title);
+  position: absolute;
+  left: 0;
+}
+
+.celebration:before {
+  animation: glitchTop 1s linear infinite;
+  clip-path: polygon(0 0, 100% 0, 100% 33%, 0 33%);
+  -webkit-clip-path: polygon(0 0, 100% 0, 100% 33%, 0 33%);
+}
+
+@keyframes glitchTop {
+  2%,
+  64% {
+    transform: translate(2px, -2px);
+  }
+  4%,
+  60% {
+    transform: translate(-2px, 2px);
+  }
+  62% {
+    transform: translate(13px, -1px) skew(-13deg);
+  }
+}
+
+.celebration:after {
+  animation: glitchBottom 1.5s linear infinite;
+  clip-path: polygon(0 67%, 100% 67%, 100% 100%, 0 100%);
+  -webkit-clip-path: polygon(0 67%, 100% 67%, 100% 100%, 0 100%);
+}
+
+@keyframes glitchBottom {
+  2%,
+  64% {
+    transform: translate(-2px, 0);
+  }
+  4%,
+  60% {
+    transform: translate(-2px, 0);
+  }
+  62% {
+    transform: translate(-22px, 5px) skew(21deg);
+  }
 }
