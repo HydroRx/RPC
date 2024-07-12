@@ -8,6 +8,9 @@
     <link rel="icon" href="./images/favicon.ico" type="image/x-icon" />
   </head>
   <body>
+    <!--
+     created a div main-content in order to hide the whole game when the user wins
+     -->
     <div id="main-content">
       <div class="content">
         <div class="title">
@@ -17,6 +20,7 @@
           <h4 id="whochosewhat"></h4>
         </div>
 
+        <!-- 5 options, RPSSL game -->
         <div class="options">
           <button class="option shadow" data-choice="rock">
             <img
@@ -62,9 +66,11 @@
       </div>
     </div>
 
+    <!-- displays only when a player wins for 2.5 seconds -->
     <div id="celebration" class="celebration" style="display: none">
-      <h1>You Won</h1>
+      <h1 id="endgametext"></h1>
     </div>
+
     <script src="script.js"></script>
   </body>
 </html>
